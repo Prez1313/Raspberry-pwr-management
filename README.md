@@ -25,6 +25,12 @@
 	sudo wget https://github.com/audiophonics/Raspberry-pwr-management/raw/master/softshutdown.sh -O /usr/lib/audiophonics/softshutdown.sh
 	sudo chmod +x /usr/lib/audiophonics/softshutdown.sh
 	sudo ln -s /usr/lib/audiophonics/softshutdown.sh /usr/bin/softshutdown.sh
+	
+## Poweroff Raspberry when performing shutdown
+	
+	sudo wget https://github.com/audiophonics/Raspberry-pwr-management/raw/master/poweroff -O
+	sudo cp poweroff /lib/systemd/system-shutdown/poweroff
+	sudo chmod +x /lib/systemd/system-shutdown/poweroff
 
 ## Installation on Volumio 2
 
