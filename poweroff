@@ -1,0 +1,18 @@
+
+#! /bin/sh
+
+# file: /lib/systemd/system-shutdown/picade-hat-poweroff
+# $1 will be either "halt", "poweroff", "reboot" or "kexec"
+
+case "$1" in
+  poweroff)
+        /bin/echo "Setting pin 7 GPIO4 High"
+        /usr/bin/gpio mode 7 out
+        /usr/bin/gpio write 7 1
+        /bin/echo "Setting pin 7 GPIO4 Low"
+        /usr/bin/gpio write 7 0
+        /bin/echo "RaspberryPi shutdown"
+        ;;
+esac
+
+:
